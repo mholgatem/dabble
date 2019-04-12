@@ -9,6 +9,7 @@
     <p>dabble</p>
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
+    <p id="output"></p>
 
     <script type="text/javascript">
       function getUrlVars() {
@@ -18,6 +19,8 @@
         });
         return vars;
         }
+   
+      document.getElementById("output").innerHTML = getUrlVars()["files"];
     </script>
 
 
