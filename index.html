@@ -19,7 +19,7 @@
         });
         return vars;
         }
-      var txt = "<iframe src="https://drive.google.com/file/d/{file}/preview" width="640" height="480"></iframe>"
+      var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview" width="640" height="480"></iframe>'
       
       document.getElementById("output").innerHTML = txt.replace("{file}", htmlgetUrlVars()["files"]);
     </script>
