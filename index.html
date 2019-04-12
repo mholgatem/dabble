@@ -9,6 +9,7 @@
     <p>dabble</p>
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
+    <div id="preview"></div>
     <p id="output"></p>
 
     <script type="text/javascript">
@@ -21,7 +22,9 @@
         }
       var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview" width="640" height="480"></iframe>'
       
-      document.getElementById("output").innerHTML = txt.replace("{file}", getUrlVars()["files"]);
+      document.getElementById("preview").innerHTML = txt.replace("{file}", getUrlVars()["files"]);
+      var content = document.createTextNode(txt.replace("{file}", getUrlVars()["files"]));
+      document.getElementById("output").appendChild(content);
     </script>
 
 
