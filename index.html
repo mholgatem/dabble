@@ -21,9 +21,14 @@
         return vars;
         }
       var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview"></iframe>'
-      
-      document.getElementById("preview").innerHTML = txt.replace("{file}", getUrlVars()["files"]);
-      var content = document.createTextNode(txt.replace("{file}", getUrlVars()["files"]));
+      var param = getUrlVars();
+      var files = param["files"].split("%2C") + param["export"].split("%2C");
+      var htmlString = "";
+      for (var i = 0; i < files.length; i++){
+        htmlString += txt.replace("{file}", files[i]);
+      }
+      document.getElementById("preview").innerHTML = htmlString;
+      var content = document.createTextNode(htmlString);
       document.getElementById("output").appendChild(content);
     </script>
 
