@@ -20,7 +20,7 @@
         });
         return vars;
         }
-      var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview" width="640" height="480"></iframe>'
+      var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview"></iframe>'
       
       document.getElementById("preview").innerHTML = txt.replace("{file}", getUrlVars()["files"]);
       var content = document.createTextNode(txt.replace("{file}", getUrlVars()["files"]));
