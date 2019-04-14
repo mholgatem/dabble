@@ -22,7 +22,7 @@
         }
       var txt = '<iframe src="https://drive.google.com/file/d/{file}/preview"></iframe>'
       var param = getUrlVars();
-      var files = param["files"].split("%2C") + param["export"].split("%2C");
+      var files = param['files'].split("%2C").concat(param['export'].split("%2C"));
       var htmlString = "";
       for (var i = 0; i < files.length; i++){
         htmlString += txt.replace("{file}", files[i]);
