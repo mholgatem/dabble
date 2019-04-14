@@ -29,9 +29,9 @@
           htmlString.push(txt.replace("{file}", files[i]));
         }
       }
-      document.getElementById("preview").innerHTML = htmlString;
+      document.getElementById("preview").innerHTML = htmlString.join();
       var content = document.createTextNode(htmlString);
-      document.getElementById("output").appendChild(content);
+      document.getElementById("output").appendChild(content).join('<br>');
     </script>
 
 
