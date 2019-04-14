@@ -29,9 +29,17 @@
           htmlString.push(txt.replace("{file}", files[i]));
         }
       }
-      document.getElementById("preview").innerHTML = htmlString.join();
+      document.getElementById("preview").innerHTML = htmlString.join('');
       var content = document.createTextNode(htmlString.join('<br>'));
       document.getElementById("output").appendChild(content);
+      
+       fetch('https://www.googleapis.com/drive/v3/files/11M0eAGG73cDryIc4rod3PEFIy-xWTwbs9A?acknowledgeAbuse=true&supportsTeamDrives=true')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
     </script>
 
 
