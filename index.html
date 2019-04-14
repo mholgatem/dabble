@@ -30,8 +30,8 @@
         }
       }
       document.getElementById("preview").innerHTML = htmlString.join();
-      var content = document.createTextNode(htmlString);
-      document.getElementById("output").appendChild(content).join('<br>');
+      var content = document.createTextNode(htmlString.join('<br>'));
+      document.getElementById("output").appendChild(content);
     </script>
 
 
